@@ -1,0 +1,25 @@
+{
+  "name": "base16.ts",
+  "version": "1.0.0",
+  "description": "base16 encode and decode library written in typescript.",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wsj7178/base16.ts.git"
+  },
+  "author": "maru<wsj7178@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wsj7178/base16.ts/issues"
+  },
+  "homepage": "https://github.com/wsj7178/base16.ts#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^3.7.0",
+    "@typescript-eslint/parser": "^3.7.0",
+    "eslint": "^7.5.0",
+    "typescript": "^3.9.7"
+  }
+}
