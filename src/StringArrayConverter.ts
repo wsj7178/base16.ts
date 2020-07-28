@@ -7,10 +7,6 @@ export default {
     return result
   },
   bytesArrayToString(arr: number[]): string {
-    let result = ''
-    arr.forEach(byte => {
-      result += String.fromCharCode(byte)
-    })
-    return result
+    return String.fromCharCode(...arr)
   }
 }
