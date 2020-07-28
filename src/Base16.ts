@@ -3,16 +3,14 @@ import StringArrayConverter from "./StringArrayConverter";
 
 export default class Base16 implements IBase16{
   decode(target: string): ArrayBuffer {
-    return target
+    return new Uint8Array(StringArrayConverter.stringToBytesArray(target)).buffer
   }
   encode(target: (string|ArrayBuffer)): string {
     if (target instanceof ArrayBuffer) {
-      const view: Uint8Array = new Uint8Array(target)
-      let result = ''
-      for (let i = view.length - 1; i >= 0; i--) {
-        result += view[i]
-      }
-      return result
+      const view8: Uint8Array = new Uint8Array(target)
+      return view8.reduce((prev, cur) => {
+        return prev + cur.toString(16)
+      }, '')
     } else {
       return this.encode(new Uint32Array(StringArrayConverter.stringToBytesArray(target)).buffer)
     }
